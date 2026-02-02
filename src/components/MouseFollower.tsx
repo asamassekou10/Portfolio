@@ -21,19 +21,19 @@ export default function MouseFollower() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed z-40 hidden md:block"
+      className="pointer-events-none fixed top-0 left-0 z-[100] hidden md:block mix-blend-difference"
       animate={{
-        x: mousePosition.x - 200,
-        y: mousePosition.y - 200,
+        x: mousePosition.x - 10,
+        y: mousePosition.y - 10,
       }}
       transition={{
         type: "spring",
-        stiffness: 50,
-        damping: 20,
+        stiffness: 500,
+        damping: 28,
         mass: 0.5,
       }}
     >
-      <div className="h-[400px] w-[400px] rounded-full bg-accent/5 blur-3xl" />
+      <div className="h-5 w-5 bg-white" />
     </motion.div>
   );
 }

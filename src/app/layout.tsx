@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import StatusBar from "@/components/StatusBar";
+import CommandPalette from "@/components/CommandPalette";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,8 +46,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="grain-overlay" aria-hidden="true" />
         {children}
+        <CommandPalette />
+        <StatusBar />
       </body>
     </html>
   );
